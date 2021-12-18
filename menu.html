@@ -1,0 +1,31 @@
+<style>
+    .item {
+        border: bisque thin solid;
+        padding: 15px;
+        height: 450px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /*
+    input[type=button] {
+        position: absolute;
+        left: 10px;
+        top:200px;
+    }
+    */
+</style>
+
+<div class="container">
+    <div class="row" ng-controller="productControl">
+        <div ng-repeat="item in menu" class="col-sm-12 col-md-6 item">
+            <img src="images/{{item.image}}"> <br>
+            {{item.price|currency}}
+            <br>
+            <input type="button" value="Add To Cart" ng-click="addCart($index)" class="btn btn-success"> <br><br>
+            {{item.name|uppercase}} <br>
+            {{item.description}} <br><br>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="pizza.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        a:hover {
+            color: brown;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body ng-app="app" style="background-color: antiquewhite;" >
+    <div class="jumbotron">
+        <a href="#/!">Home</a>
+        <a href="#!Menu">Menu</a>
+        <a href="#!Cart">Order</a>
+        <a href="#!About">Contact</a>
+    </div>
+
+    <div ng-view></div>
+
+    <div class="panel panel-footer">
+        <h4 style="text-align: center">Copyright by Le Mong Thuy &COPY; 2019, FPT-Aptech HCMC</h4>
+    </div>
+</body>
+
+</html>
