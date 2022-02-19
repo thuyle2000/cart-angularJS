@@ -5,56 +5,80 @@
             "name": "Fried Pork Rolls",
             "description": "Deep fried pork spring roll, carrot, wood ear mushroom, taro, Chinese rice vermicelli served with fresh herb, sweet and sour fish sauce",
             "price": 8.95,
-            "image": "p01.jpg"
+            "image": "p01.jpg",
+            "type": "FO"
         },
         {
             "id": 1,
             "name": "Soft Shell Crab & Green Mango Salad",
             "description": "Green mango, palm heart, red pomelo, fresh herbs and soft shell crab",
             "price": 9.42,
-            "image": "p02.jpg"
+            "image": "p02.jpg",
+            "type": "FO"
         },
         {
             "id": 2,
             "name": "Grilled 5 Spices Free Range Chicken",
             "description": "Grilled 5 spices free range chicken, fresh herbs, baby leek & thien ly flower ",
             "price": 9.42,
-            "image": "p03.jpg"
+            "image": "p03.jpg",
+            "type": "FO"
         },
         {
             "id": 3,
             "name": "Wok Tossed Cubed Pepper Beef Tenderloin with Smoked Potato Mash",
             "description": "Beef tenderloin, wok tossed with capsicum, onion, Phu Quoc black pepper, garlic & oyster sauce",
             "price": 22.28,
-            "image": "p04.jpg"
+            "image": "p04.jpg",
+            "type": "FO"
         },
         {
             "id": 4,
             "name": "Wagyu Beef Noodle Soup",
             "description": "Wagyu beef rice noodle soup served with herbs, bean sprouts, lime & chili",
             "price": 14.19,
-            "image": "p05.jpg"
+            "image": "p05.jpg",
+            "type": "FO"
         },
         {
             "id": 5,
             "name": "Shrimp Mousse Grilled On Sugar Cane",
             "description": "Shrimp mousse on sugar cane, spring onion oil, peanut, purple angel hair noodle, served with Vietnamese mixed herbs & sweet and sour fish sauce",
             "price": 11.33,
-            "image": "p06.jpg"
+            "image": "p06.jpg",
+            "type": "FO"
         },
         {
             "id": 6,
             "name": "Seabass & Asian Celery Salad Ca Mau Style",
             "description": "Thinly sliced citrus cured seabass fillet, carrot, spring onion, Asian celery",
             "price": 10.38,
-            "image": "p07.jpg"
+            "image": "p07.jpg",
+            "type": "FO"
         },
         {
             "id": 7,
             "name": "Vietnam House Coffee Flan",
             "description": "Vietnam House coffee flan with tropical fruit & coffee ganache ",
             "price": 8,
-            "image": "p08.jpg"
+            "image": "p08.jpg",
+            "type": "FO"
+        },
+        {
+            "id": 8,
+            "name": "Coca cola",
+            "description": "coca cola 320ml ",
+            "price": 8,
+            "image": "p09_a.png",
+            "type": "BE"
+        },
+        {
+            "id": 9,
+            "name": "Pepsi cola",
+            "description": "pepsi cola 320ml ",
+            "price": 7.5,
+            "image": "p10_a.png",
+            "type": "BE"
         }
     ]
 }

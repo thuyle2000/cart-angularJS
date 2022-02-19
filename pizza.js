@@ -27,7 +27,7 @@ a.run(function ($rootScope, $http) {
         console.log($rootScope.menu);
 
     });
-    
+
     $rootScope.cart = [];
     $rootScope.total = 0;
 });
@@ -55,6 +55,37 @@ a.controller("productControl", function ($scope, $rootScope) {
         $rootScope.total += item.price
         $rootScope.cart.push(newEle);
         console.log($rootScope.cart)
+    }
+
+
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+        }
+
+        let data = $rootScope.menu;
+
+        $scope.menu = (cats.length == 0) ? data : data.filter(item => cats.indexOf(item.type) >= 0);
+    }
+
+
+    $scope.show = function (id) {
+        console.log("ma: " + id);
+
+        let data = $rootScope.menu;
+        let product = data.find(v=> v.id == id);  
+
+        $scope.name = product.name;
+        $scope.price = product.price;
+        $scope.description = product.description;
+        $scope.image = product.image;
+
+        console.log(product);
+
+        
+
     }
 });
 

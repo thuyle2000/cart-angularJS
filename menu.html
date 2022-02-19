@@ -7,6 +7,12 @@
         margin-top: 15px;
     }
 
+    .filter {
+        border: solid thin red;
+        padding: 2em;
+        width: fit-content;
+    }
+
     /*
     input[type=button] {
         position: absolute;
@@ -16,9 +22,17 @@
     */
 </style>
 
-<div class="container">
-    <div class="row" ng-controller="productControl">
-        <div ng-repeat="item in menu" class="col-sm-12 col-md-6 item">
+<div class="container" ng-controller="productControl">
+    <div class="filter">
+        <input type="checkbox" id="ckFood" ng-model="cat1" value="FO" checked ng-click="choose()" class="cat"> Food <br>
+        <input type="checkbox" id="ckBev" ng-model="cat2" value="BE" checked ng-click="choose()" class="cat"> Beverage
+        <br>
+    </div>
+
+    <div class="row">
+        <div ng-repeat="item in menu" class="col-sm-12 col-md-6 item" 
+        ng-click=show(item.id)  data-toggle="modal" data-target="#myModal" >
+
             <img src="images/{{item.image}}"> <br>
             {{item.price|currency}}
             <br>
@@ -28,4 +42,40 @@
 
         </div>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="imgs-zoom-area"><img id="zoom_03" src="images/{{image}}"
+                                    style="width: 100%;" alt=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-black-1">Product Name: {{name}} </h3>
+
+                            <h6 class="brand-name-2">Product Price : {{price}}</h6>
+                           
+                            <div role="tabpanel" class="tab-pane active" id="description">
+                                <p>{{description}}.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
